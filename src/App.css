@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.time-box {
+  background: linear-gradient(145deg, #a77bff, #d0a6ff);
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 90px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+.time-box span {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.sub-text {
+  font-size: 1.4rem;
+  margin-top: 25px;
+  font-style: italic;
+}
+
+.birthday-message {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f7e9ff;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.balloons {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -50px;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.balloon.violet { background: #a77bff; left: 10%; animation-delay: 0s; }
+.balloon.pink { background: #ff80d5; left: 40%; animation-delay: 1s; }
+.balloon.lavender { background: #d0a6ff; left: 70%; animation-delay: 2s; }
+.balloon.purple { background: #7b2ff7; left: 85%; animation-delay: 3s; }
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-300px) scale(1.1); opacity: 0.8; }
+  100% { transform: translateY(-600px) scale(0.9); opacity: 0; }
+}
+
+.kisses {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.kiss {
+  position: absolute;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: flyKiss 5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes flyKiss {
+  0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateY(-200px) scale(1.2) rotate(15deg); opacity: 0.9; }
+  100% { transform: translateY(-400px) scale(0.8) rotate(-15deg); opacity: 0; }
+}
